@@ -8,7 +8,7 @@
 
 ## 🌐 Live Site
 
-👉 [ixdbl79.github.io/shadoshka-docs](https://ixdbl79.github.io/shadoshka-docs)
+👉 [ixdbl79.github.io/shadoshka](https://ixdbl79.github.io/shadoshka)
 
 ---
 
