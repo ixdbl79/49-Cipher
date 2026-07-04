@@ -15,16 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('header-placeholder').innerHTML = data;
         })
         .catch(() => {
-            // Fallback if header fails to load
+            // FALLBACK – Logo only
             document.getElementById('header-placeholder').innerHTML = `
-                <nav class="navbar container">
-                    <div class="logo"><a href="/">49 Cipher</a></div>
-                    <div class="nav-links">
-                        <a href="/">Home</a>
-                        <a href="/49-cipher-showcase.html">Showcase 1</a>
-                        <a href="/truth-reveal-showcase.html">Showcase 2</a>
-                    </div>
-                </nav>
+                <div style="text-align: center; padding: 0.5rem 0;">
+                    <img src="images/xdxq_tr_800x800.png" alt="49 Cipher Logo" style="margin: -4rem auto; width: 250px;">
+                </div>
             `;
         });
 
@@ -38,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
         .catch(() => {
-            // Fallback if footer fails to load
+            // Fallback footer
             document.getElementById('footer-placeholder').innerHTML = `
                 <div class="footer">
                     🛡️⚡📘 <strong>49 Cipher – The Criterion (Furqan / الفرقان)</strong><br>
