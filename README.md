@@ -8,7 +8,7 @@
 
 ## 🌐 Live Site
 
-👉 [ixdbl79.github.io/shadoshka](https://ixdbl79.github.io/shadoshka)
+👉 [ixdbl79.github.io/49-Cipher](https://ixdbl79.github.io/49-Cipher)
 
 ---
 
@@ -27,7 +27,7 @@ The 49 Cipher is a gift – not a product. It is meant to be shared freely, stud
 ## 🧩 Project Structure
 
 ```
-shadoshka-docs/
+49-Cipher/
 ├── index.html                  # Main documentation page
 ├── 49-cipher-showcase.html     # Pattern Recognition showcase
 ├── truth-reveal-showcase.html  # Truth Reveal showcase
@@ -52,8 +52,8 @@ shadoshka-docs/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ixdbl79/shadoshka-docs.git
-   cd shadoshka-docs
+   git clone https://github.com/ixdbl79/49-Cipher.git
+   cd 49-Cipher
    ```
 
 2. **Open with Live Server** (recommended)
