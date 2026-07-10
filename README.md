@@ -95,7 +95,7 @@ This project is built on a simple commitment:
 │   ├── 49-cipher-showcase.html     # Showcase 1 – Pattern Recognition
 │   ├── truth-reveal-showcase.html  # Showcase 2 – Truth Reveal
 │   ├── khader-story.html           # Showcase 3 – Musa & Khader
-│   └── template.html                  # Template for new pages
+│   └── template.html               # Template for new pages
 │
 ├── css/                            # Stylesheets
 │   └── style.css                   # Master stylesheet
@@ -104,9 +104,14 @@ This project is built on a simple commitment:
 │   └── main.js                     # Loads header/footer + back-to-top
 │
 └── images/                         # Images & favicons
-    ├── favicon.ico
-    ├── xdxq_dark_800x800.png
-    └── xdxq_tr_800x800.png
+    ├── 49-tr-800x800.png           # Main logo (transparent)
+    ├── apple-touch-icon.png        # iOS home screen icon (180x180)
+    ├── favicon.ico                 # Classic favicon (16x16, 32x32, 48x48)
+    ├── favicon.svg                 # Vector favicon (modern browsers)
+    ├── favicon-96x96.png           # Desktop favicon (96x96)
+    ├── site.webmanifest            # PWA manifest file
+    ├── web-app-manifest-192x192.png # Android/PWA icon (192x192)
+    └── web-app-manifest-512x512.png # Android/PWA icon (512x512)
 ```
 
 
