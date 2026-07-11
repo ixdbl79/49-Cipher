@@ -5,8 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ----- Load Header (relative path) -----
-    fetch('components/header.html')
+    // ----- Load Header -----
+    fetch('/49-Cipher/components/header.html')
         .then(response => {
             if (!response.ok) throw new Error('Header not found');
             return response.text();
@@ -58,13 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // FALLBACK – Logo only
             document.getElementById('header-placeholder').innerHTML = `
                 <div style="text-align: center; padding: 0.5rem 0;">
-                    <img src="images/49-tr-800x800.png" alt="49 Cipher Logo" style="margin: -4rem auto; width: 250px;">
+                    <img src="/49-Cipher/images/49-tr-800x800.png" alt="49 Cipher Logo" style="margin: -4rem auto; width: 250px;">
                 </div>
             `;
         });
 
-    // ----- Load Footer (relative path) -----
-    fetch('components/footer.html')
+    // ----- Load Footer -----
+    fetch('/49-Cipher/components/footer.html')
         .then(response => {
             if (!response.ok) throw new Error('Footer not found');
             return response.text();
