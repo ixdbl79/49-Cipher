@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. LOAD HEADER
     // ========================================
 
-    fetch('/components/header.html')
+    fetch('components/header.html')
         .then(response => {
             if (!response.ok) throw new Error('Header not found');
             return response.text();
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. LOAD FOOTER
     // ========================================
 
-    fetch('/components/footer.html')
+    fetch('components/footer.html')
         .then(response => {
             if (!response.ok) throw new Error('Footer not found');
             return response.text();
