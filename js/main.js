@@ -12,31 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const isGitHubPages = window.location.hostname.includes('github.io');
     const basePath = isGitHubPages ? '/49-Cipher' : '';
 
-    // ============================================================
-    // DETECT PAGE DEPTH – How many folders deep are we?
-    // ============================================================
-
-    const pathSegments = window.location.pathname.split('/').filter(s => s && !s.includes('.'));
-    const isInSubfolder = pathSegments.length > 0 && pathSegments[0] !== '49-Cipher' && pathSegments[0] !== '';
-    const depth = isInSubfolder ? '..' : '';
-
     // Helper function to build correct paths
     function getPath(path) {
         const cleanPath = path.replace(/^\//, '');
-        // If we're in a subfolder (like pages/), prepend '..'
-        if (depth) {
-            return `${depth}/${cleanPath}`;
-        }
-        // Otherwise, use basePath if on GitHub Pages
         if (isGitHubPages && basePath) {
             return `${basePath}/${cleanPath}`;
         }
         return cleanPath;
     }
 
-    // Helper to replace placeholders in HTML
+    // Helper to replace {{BASE_PATH}} placeholders in HTML
+    // FIXED: Uses the actual basePath, not depth-based '..' or ''
     function replaceBasePath(html) {
-        return html.replace(/\{\{BASE_PATH\}\}/g, depth ? '..' : '');
+        return html.replace(/\{\{BASE_PATH\}\}/g, basePath);
     }
 
     // ============================================================
