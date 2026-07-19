@@ -63,6 +63,14 @@ The full story of Musa (Moses) and Khader – the servant of God who acts on div
 
 ---
 
+#### ⚡ Showcase 4 – Human & Jinn xPOST, Insane — Genius Hack the System
+
+Decoding the nature of Jinn as energy, the system as control, and the 49 Cipher as the key to awakening. Includes the revelation that Jinn = GEN = electricity = power = wealth, and that adding one letter transforms it into **N.jin = Engine** – controlled energy that moves you forward.
+
+👉 [**Read Showcase 4**](https://ixdbl79.github.io/49-Cipher/pages/jinn-ins-showcase.html)
+
+---
+
 ## 🧠 The 49 Cipher Philosophy
 
 This project is built on a simple commitment:
@@ -95,7 +103,7 @@ This project is built on a simple commitment:
 │   ├── 49-cipher-showcase.html     # Showcase 1 – Pattern Recognition
 │   ├── truth-reveal-showcase.html  # Showcase 2 – Truth Reveal
 │   ├── khader-story.html           # Showcase 3 – Musa & Khader
-│   └── template.html               # Template for new pages
+│   └── jinn-ins-showcase.html      # Showcase 4 – Jinn & Human
 │
 ├── css/                            # Stylesheets
 │   └── style.css                   # Master stylesheet

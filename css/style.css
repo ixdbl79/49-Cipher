@@ -34,7 +34,7 @@ body {
     background: #151517;
     border-radius: 24px;
     padding: 2rem;
-    border: 1px solid #2d3a4a;
+    /*border: 1px solid #2d3a4a;*/
 }
 
 /* For pages that don't need the container padding on mobile */
@@ -1126,7 +1126,7 @@ th {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
 }
@@ -1207,7 +1207,7 @@ th {
     top: 100%;
     left: 0;
     min-width: 220px;
-    background: #1e2a3a;
+    background: #151517;
     border: 1px solid #f59e0b33;
     border-radius: 12px;
     padding: 0.5rem 0;
@@ -1749,4 +1749,11 @@ th {
     .footer-links-col ul li a:hover {
         padding-left: 0;
     }
+}
+/* ========================================
+   FIX: Space between gold border and title
+   ======================================== */
+
+.hero-title {
+    padding-left: 1.5rem; /* Adds space between the gold border and text */
 }
