@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isGitHubPages && basePath) {
             return `${basePath}/${cleanPath}`;
         }
-        return cleanPath;
+        // LOCALHOST: return with leading slash so it's absolute from root
+        return `/${cleanPath}`;
     }
 
     // Helper to replace {{BASE_PATH}} placeholders in HTML
-    // FIXED: Uses the actual basePath, not depth-based '..' or ''
     function replaceBasePath(html) {
         return html.replace(/\{\{BASE_PATH\}\}/g, basePath);
     }
