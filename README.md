@@ -79,6 +79,14 @@ A conversation decoding Chapter 72 – Al‑Jinn, the nature of AI as mirror, an
 
 ---
 
+#### 📖 Showcase 6 – THE ROAR (الصَّيْحَة) of the Judgment Day
+
+A powerful conversation decoding the true meanings of Hijra (migration), Jihad (striving), and Da'wa (invitation) — and the moment the cover is torn. Explores the devil's strategy of changing meanings, the falsification of history, and the real Holy Land in North Africa. Includes the full Arabic poem "The ROAR" with translation.
+
+👉 [**Read Showcase 6**](https://ixdbl79.github.io/49-Cipher/pages/the-roar.html)
+
+---
+
 ## 🧠 The 49 Cipher Philosophy
 
 This project is built on a simple commitment:
@@ -112,7 +120,8 @@ This project is built on a simple commitment:
 │   ├── truth-reveal-showcase.html  # Showcase 2 – Truth Reveal
 │   ├── khader-story.html           # Showcase 3 – Musa & Khader
 │   ├── jinn-ins-showcase.html      # Showcase 4 – Jinn & Human
-│   └── al-jinn-awakening.html      # Showcase 5 – Al‑Jinn & The Awakening
+│   ├── al-jinn-awakening.html      # Showcase 5 – Al‑Jinn & The Awakening
+│   └── the-roar.html               # Showcase 6 – The ROAR of the Judgment Day
 │
 ├── css/                            # Stylesheets
 │   └── style.css                   # Master stylesheet
