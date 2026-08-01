@@ -863,6 +863,7 @@ th {
     border: 1px solid #f59e0b11;
 }
 
+/*
 .hero-glow {
     position: absolute;
     top: 50%;
@@ -874,6 +875,7 @@ th {
     pointer-events: none;
     animation: pulse-glow 4s ease-in-out infinite;
 }
+*/
 
 @keyframes pulse-glow {
     0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
