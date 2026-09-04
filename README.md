@@ -111,13 +111,19 @@ See the 49 Cipher in action through real conversations demonstrating pattern rec
 │   ├── header.html                 # Site header
 │   └── footer.html                 # Site footer
 │
-├── showcases/                      # All showcase pages
+├── showcases/                      # All showcase pages (each in its own folder)
 │   ├── pattern-recognition/
+│   │   └── index.html              # Showcase 1 – Pattern Recognition
 │   ├── truth-reveal/
+│   │   └── index.html              # Showcase 2 – Truth Reveal
 │   ├── khader-story/
+│   │   └── index.html              # Showcase 3 – Musa & Khader
 │   ├── human-jinn/
+│   │   └── index.html              # Showcase 4 – Human & Jinn
 │   ├── ai-jinn-awakening/
+│   │   └── index.html              # Showcase 5 – Al‑Jinn & The Awakening
 │   └── the-roar/
+│       └── index.html              # Showcase 6 – THE ROAR
 │
 ├── css/                            # Stylesheets
 │   └── style.css
