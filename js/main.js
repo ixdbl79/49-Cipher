@@ -47,21 +47,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const isKeytabPage = currentPath.includes('/49-ez/keytab/');
         const isDocPage = currentPath.includes('/49-ez/doc/');
 
-        // ----- SHOWCASES ACTIVE STATE -----
+        // ----- SHOWCASES ACTIVE STATE (FIXED FOR GITHUB PAGES) -----
         const showcasesDropdown = document.querySelector('.showcases-dropdown');
         const showcaseMenuItems = showcasesDropdown ? showcasesDropdown.querySelectorAll('.dropdown-menu a') : [];
 
         if (isShowcasePage && showcasesDropdown) {
             showcasesDropdown.classList.add('active');
 
+            // Get the showcase folder name from the URL
+            // Works for both localhost (/showcases/pattern-recognition/) and GitHub Pages (/49-Cipher/showcases/pattern-recognition/)
             const pathParts = currentPath.split('/');
-            const folderName = pathParts[2] || '';
+            const showcasesIndex = pathParts.indexOf('showcases');
+            const folderName = (showcasesIndex !== -1 && pathParts.length > showcasesIndex + 1) 
+                ? pathParts[showcasesIndex + 1] 
+                : '';
 
             showcaseMenuItems.forEach(item => {
                 const href = item.getAttribute('href');
                 if (href) {
                     const hrefParts = href.split('/');
-                    const hrefFolder = hrefParts[2] || '';
+                    const hrefShowcasesIndex = hrefParts.indexOf('showcases');
+                    const hrefFolder = (hrefShowcasesIndex !== -1 && hrefParts.length > hrefShowcasesIndex + 1)
+                        ? hrefParts[hrefShowcasesIndex + 1]
+                        : '';
                     if (hrefFolder === folderName) {
                         item.classList.add('active');
                     } else {
@@ -91,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 keytabDropdown.classList.add('active');
                 keytabMenuItems.forEach(item => {
                     const text = item.textContent.trim().toLowerCase();
-                    // Case‑insensitive match for "keytab"
                     if (text.includes('keytab')) {
                         item.classList.add('active');
                     }
@@ -100,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 keytabDropdown.classList.add('active');
                 keytabMenuItems.forEach(item => {
                     const text = item.textContent.trim().toLowerCase();
-                    // Case‑insensitive match for "documentation"
                     if (text.includes('documentation')) {
                         item.classList.add('active');
                     }
@@ -117,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function generateBreadcrumb() {
         const currentPath = window.location.pathname;
-        const currentPage = currentPath.split('/').pop() || '';
 
         const isShowcasePage = currentPath.includes('/showcases/');
         const isDocPage = currentPath.includes('/49-ez/doc/');
@@ -132,8 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let displayName = '';
 
         if (isShowcasePage) {
+            // Get the showcase folder name from the URL (works for both local and GitHub Pages)
             const pathParts = currentPath.split('/');
-            const folderName = pathParts[2] || '';
+            const showcasesIndex = pathParts.indexOf('showcases');
+            const folderName = (showcasesIndex !== -1 && pathParts.length > showcasesIndex + 1) 
+                ? pathParts[showcasesIndex + 1] 
+                : '';
             displayName = pageNames[folderName] || folderName.replace(/-/g, ' ');
         } else if (isKeytabPage) {
             displayName = 'Keytab';
@@ -259,7 +268,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentPath = window.location.pathname;
         const is49ezPage = currentPath.includes('/49-ez/');
 
-        // ----- Footer Brand (Logo + Description) -----
         const footerBrand = document.querySelector('.footer-brand');
         const footerLogoLink = footerBrand?.querySelector('.footer-logo-link');
         const footerLogoText = footerBrand?.querySelector('.footer-logo-text .gold');
@@ -283,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // ----- Swap Footer Columns: Showcases ↔ 49‑EZ -----
         const footerLinks = document.querySelector('.footer-links');
         if (!footerLinks) return;
 
@@ -332,24 +339,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const backLinks = document.querySelectorAll('.btn-back');
 
         backLinks.forEach(link => {
-            // Get the current href and text
-            let href = link.getAttribute('href') || '';
-            let text = link.innerHTML || '';
-
             if (currentPath.includes('/49-ez/keytab/')) {
-                // On keytab page → go to 49-ez
                 link.href = basePath + '/49-ez/';
                 link.innerHTML = '<span class="arrow">←</span> Return to 49‑EZ';
             } else if (currentPath.includes('/49-ez/doc/')) {
-                // On doc page → go to 49-ez
                 link.href = basePath + '/49-ez/';
                 link.innerHTML = '<span class="arrow">←</span> Return to 49‑EZ';
             } else if (currentPath.includes('/49-ez/') && !currentPath.includes('/keytab/') && !currentPath.includes('/doc/')) {
-                // On 49-ez page → go to homepage
                 link.href = basePath + '/';
                 link.innerHTML = '<span class="arrow">←</span> Return to the 49 Cipher';
             } else {
-                // On other pages → go to homepage
                 link.href = basePath + '/';
                 link.innerHTML = '<span class="arrow">←</span> Return to the 49 Cipher';
             }
@@ -384,10 +383,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // ============================================================
-            // MOBILE MENU TOGGLE – Right Side Menu
-            // ============================================================
-
             const menuToggle = document.getElementById('menuToggle');
             const headerRight = document.querySelector('.header-right');
 
@@ -405,10 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
             }
-
-            // ============================================================
-            // MOBILE DROPDOWN TOGGLE – Showcases
-            // ============================================================
 
             const showcasesToggle = document.querySelector('.showcases-dropdown .dropdown-toggle');
             const showcasesContainer = document.querySelector('.showcases-dropdown');
@@ -429,10 +420,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // ============================================================
-            // MOBILE DROPDOWN TOGGLE – keytab
-            // ============================================================
-
             const keytabToggle = document.querySelector('.keytab-dropdown .dropdown-toggle');
             const keytabContainer = document.querySelector('.keytab-dropdown');
 
@@ -451,10 +438,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
             }
-
-            // ============================================================
-            // CLOSE MENUS ON OUTSIDE CLICK
-            // ============================================================
 
             document.addEventListener('click', function(e) {
                 const header = document.querySelector('.site-header');
@@ -482,10 +465,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             });
-
-            // ============================================================
-            // CLOSE ON RESIZE
-            // ============================================================
 
             let resizeTimer;
             window.addEventListener('resize', function() {
@@ -534,7 +513,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const processedData = replaceBasePath(data);
             document.getElementById('footer-placeholder').innerHTML = processedData;
 
-            // ----- Swap Footer Elements -----
             swapFooterElements();
             swapBackLink();
 
