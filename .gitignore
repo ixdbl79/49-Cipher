@@ -9,3 +9,7 @@ Thumbs.db
 # Local server files
 *.log
 *.tmp
+
+__pycache__/
+*.pyc
+*.pyo

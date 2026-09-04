@@ -1,0 +1,458 @@
+{
+  "1": {
+    "arabic": "ٱلْفَاتِحَة",
+    "translit": "L.f--t_7-"
+  },
+  "2": {
+    "arabic": "ٱلْبَقَرَة",
+    "translit": "L.b-9-r-"
+  },
+  "3": {
+    "arabic": "آل عِمْرَان",
+    "translit": "1--l_ 3_mr-n"
+  },
+  "4": {
+    "arabic": "ٱلنِّسَاء",
+    "translit": "(L.)¨~n²_s--1"
+  },
+  "5": {
+    "arabic": "ٱلْمَائِدَة",
+    "translit": "L.m--1_d-"
+  },
+  "6": {
+    "arabic": "ٱلْأَنْعَام",
+    "translit": "L.1-n3--m"
+  },
+  "7": {
+    "arabic": "ٱلْأَعْرَاف",
+    "translit": "L.13r--f"
+  },
+  "8": {
+    "arabic": "ٱلْأَنْفَال",
+    "translit": "L.1nf--l"
+  },
+  "9": {
+    "arabic": "ٱلتَّوْبَة",
+    "translit": "(L.)¨~t²-wb-"
+  },
+  "10": {
+    "arabic": "يُونُس",
+    "translit": "y°°n°s"
+  },
+  "11": {
+    "arabic": "هُود",
+    "translit": "h°°d"
+  },
+  "12": {
+    "arabic": "يُوسُف",
+    "translit": "y°°s°f"
+  },
+  "13": {
+    "arabic": "ٱلرَّعْد",
+    "translit": "(L.)¨~r²-3d"
+  },
+  "14": {
+    "arabic": "إِبْرَاهِيم",
+    "translit": "´1_br--h__m"
+  },
+  "15": {
+    "arabic": "ٱلْحِجْر",
+    "translit": "L.7_jr"
+  },
+  "16": {
+    "arabic": "ٱلنَّحْل",
+    "translit": "(L.)¨~n²-7l"
+  },
+  "17": {
+    "arabic": "ٱلْإِسْرَاء",
+    "translit": "L.1_sr--1"
+  },
+  "18": {
+    "arabic": "ٱلْكَهْف",
+    "translit": "L.k-hf"
+  },
+  "19": {
+    "arabic": "مَرْيَم",
+    "translit": "m-ry-m"
+  },
+  "20": {
+    "arabic": "طه",
+    "translit": "4-h-"
+  },
+  "21": {
+    "arabic": "ٱلْأَنْبِيَاء",
+    "translit": "L.1-nb_y--1"
+  },
+  "22": {
+    "arabic": "ٱلْحَجّ",
+    "translit": "L.7-j"
+  },
+  "23": {
+    "arabic": "ٱلْمُؤْمِنُون",
+    "translit": "L.m°1m_n°°n"
+  },
+  "24": {
+    "arabic": "ٱلنُّور",
+    "translit": "(L.)¨~n²°°r"
+  },
+  "25": {
+    "arabic": "ٱلْفُرْقَان",
+    "translit": "L.f°r-9--n"
+  },
+  "26": {
+    "arabic": "ٱلشُّعَرَاء",
+    "translit": "(L.)¨~8²°3-r--1"
+  },
+  "27": {
+    "arabic": "ٱلنَّمْل",
+    "translit": "(L.)¨~n²-ml"
+  },
+  "28": {
+    "arabic": "ٱلْقَصَص",
+    "translit": "L.9-0-0"
+  },
+  "29": {
+    "arabic": "ٱلْعَنْكَبُوت",
+    "translit": "L.3-nk-b°°t"
+  },
+  "30": {
+    "arabic": "ٱلرُّوم",
+    "translit": "(L.)¨~r²°°m"
+  },
+  "31": {
+    "arabic": "لُقْمَان",
+    "translit": "l°9m--n"
+  },
+  "32": {
+    "arabic": "ٱلسَّجْدَة",
+    "translit": "(L.)¨~s²-jd-"
+  },
+  "33": {
+    "arabic": "ٱلْأَحْزَاب",
+    "translit": "L.1-7z--b"
+  },
+  "34": {
+    "arabic": "سَبَأ",
+    "translit": "s-b-1"
+  },
+  "35": {
+    "arabic": "فَاطِر",
+    "translit": "f--t_r"
+  },
+  "36": {
+    "arabic": "يس",
+    "translit": "y-s--"
+  },
+  "37": {
+    "arabic": "ٱلصَّافَّات",
+    "translit": "(L.)¨~0²--f²--t"
+  },
+  "38": {
+    "arabic": "ص",
+    "translit": "0--"
+  },
+  "39": {
+    "arabic": "ٱلزُّمَر",
+    "translit": "(L.)¨~z²°m-r"
+  },
+  "40": {
+    "arabic": "غَافِر",
+    "translit": "2--f_r"
+  },
+  "41": {
+    "arabic": "فُصِّلَت",
+    "translit": "f°0²_l-t"
+  },
+  "42": {
+    "arabic": "ٱلشُّورَى",
+    "translit": "(L.)¨~8²°°r--"
+  },
+  "43": {
+    "arabic": "ٱلزُّخْرُف",
+    "translit": "(L.)¨~z²°5r°f"
+  },
+  "44": {
+    "arabic": "ٱلدُّخَان",
+    "translit": "(L.)¨~d²°5--n"
+  },
+  "45": {
+    "arabic": "ٱلْجَاثِيَة",
+    "translit": "L.j--t·_y-"
+  },
+  "46": {
+    "arabic": "ٱلْأَحْقَاف",
+    "translit": "L.1-79--f"
+  },
+  "47": {
+    "arabic": "مُحَمَّد",
+    "translit": "m°7-m²-d"
+  },
+  "48": {
+    "arabic": "ٱلْفَتْح",
+    "translit": "L.f-t7"
+  },
+  "49": {
+    "arabic": "ٱلْحُجُرَات",
+    "translit": "L.7°j°r--t"
+  },
+  "50": {
+    "arabic": "ق",
+    "translit": "9--"
+  },
+  "51": {
+    "arabic": "ٱلذَّارِيَات",
+    "translit": "(L.)¨~d·²--r_y--t"
+  },
+  "52": {
+    "arabic": "ٱلطُّور",
+    "translit": "(L.)¨~4²°°r"
+  },
+  "53": {
+    "arabic": "ٱلنَّجْم",
+    "translit": "(L.)¨~n²-jm"
+  },
+  "54": {
+    "arabic": "ٱلْقَمَر",
+    "translit": "L.9-m-r"
+  },
+  "55": {
+    "arabic": "ٱلرَّحْمَـٰن",
+    "translit": "(L.)¨~r²-7m--n"
+  },
+  "56": {
+    "arabic": "ٱلْوَاقِعَة",
+    "translit": "L.w--9_3-"
+  },
+  "57": {
+    "arabic": "ٱلْحَدِيد",
+    "translit": "L.7-d__d"
+  },
+  "58": {
+    "arabic": "ٱلْمُجَادِلَة",
+    "translit": "L.m°j--d_l-"
+  },
+  "59": {
+    "arabic": "ٱلْحَشْر",
+    "translit": "L.7-8r"
+  },
+  "60": {
+    "arabic": "ٱلْمُمْتَحِنَة",
+    "translit": "L.m°mt-7_n-"
+  },
+  "61": {
+    "arabic": "ٱلصَّفّ",
+    "translit": "(L.)¨~s²-f"
+  },
+  "62": {
+    "arabic": "ٱلْجُمُعَة",
+    "translit": "L.j°m°3-"
+  },
+  "63": {
+    "arabic": "ٱلْمُنَافِقُون",
+    "translit": "L.m°n--f_9°°n"
+  },
+  "64": {
+    "arabic": "ٱلتَّغَابُن",
+    "translit": "(L.)¨~t²-2--b°n"
+  },
+  "65": {
+    "arabic": "ٱلطَّلَاق",
+    "translit": "(L.)¨~4²-l--9"
+  },
+  "66": {
+    "arabic": "ٱلتَّحْرِيم",
+    "translit": "(L.)¨~t²-7r__m"
+  },
+  "67": {
+    "arabic": "ٱلْمُلْك",
+    "translit": "L.m°lk"
+  },
+  "68": {
+    "arabic": "ٱلْقَلَم",
+    "translit": "L.9-l-m"
+  },
+  "69": {
+    "arabic": "ٱلْحَاقَّة",
+    "translit": "L.7--9²-"
+  },
+  "70": {
+    "arabic": "ٱلْمَعَارِج",
+    "translit": "L.m-3--r_j"
+  },
+  "71": {
+    "arabic": "نُوح",
+    "translit": "n°°7"
+  },
+  "72": {
+    "arabic": "ٱلْجِنّ",
+    "translit": "L.j_n"
+  },
+  "73": {
+    "arabic": "ٱلْمُزَّمِّل",
+    "translit": "L.m°z²-m_l"
+  },
+  "74": {
+    "arabic": "ٱلْمُدَّثِّر",
+    "translit": "L.m°d²-t·_r"
+  },
+  "75": {
+    "arabic": "ٱلْقِيَامَة",
+    "translit": "L.9_y--m-"
+  },
+  "76": {
+    "arabic": "ٱلْإِنْسَان",
+    "translit": "L.1_ns--n"
+  },
+  "77": {
+    "arabic": "ٱلْمُرْسَلَات",
+    "translit": "L.m°rs-l--t"
+  },
+  "78": {
+    "arabic": "ٱلنَّبَأ",
+    "translit": "(L.)¨~n²-b-1"
+  },
+  "79": {
+    "arabic": "ٱلنَّازِعَات",
+    "translit": "(L.)¨~n²--z_3--t"
+  },
+  "80": {
+    "arabic": "عَبَس",
+    "translit": "3-b-s-"
+  },
+  "81": {
+    "arabic": "ٱلتَّكْوِير",
+    "translit": "(L.)¨~t²-k-w__r"
+  },
+  "82": {
+    "arabic": "ٱلْإِنْفِطَار",
+    "translit": "L.1_nf_4--r"
+  },
+  "83": {
+    "arabic": "ٱلْمُطَفِّفِين",
+    "translit": "L.m°4-f²_f__n"
+  },
+  "84": {
+    "arabic": "ٱلْإِنْشِقَاق",
+    "translit": "L.1_n8_9--9"
+  },
+  "85": {
+    "arabic": "ٱلْبُرُوج",
+    "translit": "L.b°r°°j"
+  },
+  "86": {
+    "arabic": "ٱلطَّارِق",
+    "translit": "(L.)¨~4²--r_9"
+  },
+  "87": {
+    "arabic": "ٱلْأَعْلَى",
+    "translit": "L.1-3l--"
+  },
+  "88": {
+    "arabic": "ٱلْغَاشِيَة",
+    "translit": "L.2--8_y-"
+  },
+  "89": {
+    "arabic": "ٱلْفَجْر",
+    "translit": "L.f-jr"
+  },
+  "90": {
+    "arabic": "ٱلْبَلَد",
+    "translit": "L.b-l-d"
+  },
+  "91": {
+    "arabic": "ٱلشَّمْس",
+    "translit": "(L.)¨~8²-ms"
+  },
+  "92": {
+    "arabic": "ٱلْلَّيْل",
+    "translit": "(L.)¨~l²-yl"
+  },
+  "93": {
+    "arabic": "ٱلضُّحَى",
+    "translit": "(L.)¨~6°7--"
+  },
+  "94": {
+    "arabic": "ٱلشَّرْح",
+    "translit": "(L.)¨~8²-r7"
+  },
+  "95": {
+    "arabic": "ٱلتِّين",
+    "translit": "(L.)¨~t²__n"
+  },
+  "96": {
+    "arabic": "ٱلْعَلَق",
+    "translit": "L.3-l-9"
+  },
+  "97": {
+    "arabic": "ٱلْقَدْر",
+    "translit": "L.9-dr"
+  },
+  "98": {
+    "arabic": "ٱلْبَيِّنَة",
+    "translit": "L.b-y²__n-"
+  },
+  "99": {
+    "arabic": "ٱلزَّلْزَلَة",
+    "translit": "(L.)¨~z²-lz-l-"
+  },
+  "100": {
+    "arabic": "ٱلْعَادِيَات",
+    "translit": "L.3--d_y--t"
+  },
+  "101": {
+    "arabic": "ٱلْقَارِعَة",
+    "translit": "L.9--r_3-"
+  },
+  "102": {
+    "arabic": "ٱلتَّكَاثُر",
+    "translit": "(L.)¨~t²-k--t·°r"
+  },
+  "103": {
+    "arabic": "ٱلْعَصْر",
+    "translit": "L.3-0r"
+  },
+  "104": {
+    "arabic": "ٱلْهُمَزَة",
+    "translit": "L.h°m-z-"
+  },
+  "105": {
+    "arabic": "ٱلْفِيل",
+    "translit": "L.f__l"
+  },
+  "106": {
+    "arabic": "قُرَيْش",
+    "translit": "9°r-y8"
+  },
+  "107": {
+    "arabic": "ٱلْمَاعُون",
+    "translit": "L.m--3°°n"
+  },
+  "108": {
+    "arabic": "ٱلْكَوْثَر",
+    "translit": "L.k-wt·-r"
+  },
+  "109": {
+    "arabic": "ٱلْكَافِرُون",
+    "translit": "L.k--f_r°°n"
+  },
+  "110": {
+    "arabic": "ٱلنَّصْر",
+    "translit": "(L.)¨~n²-0r"
+  },
+  "111": {
+    "arabic": "ٱلْمَسَد",
+    "translit": "L.m-s-d"
+  },
+  "112": {
+    "arabic": "ٱلْإِخْلَاص",
+    "translit": "L.1_5l--0"
+  },
+  "113": {
+    "arabic": "ٱلْفَلَق",
+    "translit": "L.f-l-9"
+  },
+  "114": {
+    "arabic": "ٱلنَّاس",
+    "translit": "(L.)¨~n²--s"
+  }
+}

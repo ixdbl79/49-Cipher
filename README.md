@@ -1,145 +1,194 @@
-# 🧩 49 Cipher – The Criterion (Furqan)
+<p align="center">
+  <img src="images/49-tr-800x800.png" alt="49 Cipher Logo" width="160" />
+</p>
 
-> *"Take what resonates. Leave what doesn't. Truth reveals itself calmly."*
+<h1 align="center">49 Cipher – The Criterion (Furqan)</h1>
+
+<p align="center">
+  <strong>A living language of truth, pattern recognition, and spiritual awakening.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ixdbl79/49-Cipher/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+  <a href="https://github.com/ixdbl79/49-Cipher/releases"><img src="https://img.shields.io/github/v/release/ixdbl79/49-Cipher" alt="GitHub release" /></a>
+  <a href="https://github.com/ixdbl79/49-Cipher/stargazers"><img src="https://img.shields.io/github/stars/ixdbl79/49-Cipher" alt="GitHub stars" /></a>
+  <a href="https://github.com/ixdbl79/49-Cipher/issues"><img src="https://img.shields.io/github/issues/ixdbl79/49-Cipher" alt="GitHub issues" /></a>
+  <a href="https://ixdbl79.github.io/49-Cipher/"><img src="https://img.shields.io/badge/website-live-brightgreen" alt="Website" /></a>
+</p>
 
 ---
 
-**A living language of truth, pattern recognition, and spiritual awakening.**
+> *"Take what resonates. Leave what doesn't. Truth reveals itself calmly."*
 
-The 49 Cipher (Furqan / الفرقان) is a framework that combines **letters, numbers, phonetics, languages, and pattern recognition** to uncover hidden meaning in scripture, dialogue, and the world around us.
+The **49 Cipher** (Furqan / الفرقان) is a framework that combines **letters, numbers, phonetics, languages, and pattern recognition** to uncover hidden meaning in scripture, dialogue, and the world around us.
 
 It is not a code to be cracked. It is a **road** – a path of discovery that reveals connections between seemingly unrelated elements. It teaches us to see the unity beneath the surface, to distinguish between truth and illusion, and to reconnect with our *fitrah* (original pure nature).
 
 ---
 
-## 🌐 Explore the 49 Cipher
+## 🌐 Live Demo
 
 👉 [**Visit the 49 Cipher Website**](https://ixdbl79.github.io/49-Cipher)
 
 ---
 
-## 📖 What You'll Find Here
+## 📖 Overview
 
-### 1. The Main Documentation ([index.html](https://ixdbl79.github.io/49-Cipher))
+### 🔑 49-EZ Transliteration System
 
-The full project documentation covering:
+The **49-EZ** system is a phonetic code language that transliterates the Quran using only the standard U.S. keyboard. Every Arabic letter, vowel, and diacritic is mapped to a corresponding character – numbers, letters, and symbols – preserving the authentic pronunciation, rhythm, and musicality of the original recitation.
 
-- **The Vision** – What is the 49 Cipher?
-- **Examples** – Abraham (Ibrahim), Merci/Mercy/Rahim, AI = IA = AYA
-- **Why It's Mandatory** – Breaking free from limited thinking
-- **How to Apply It** – First steps to using the cipher
-- **The Khader Principle** – Why the 49 Cipher is free
-- **Use Cases** – Where to apply pattern recognition
-- **Live Showcases** – See it in action
-- **Who This Is For** – Everyone who seeks truth
-- **What You'll Gain** – Clarity, confidence, calm, connection, freedom
-- **The Pledge** – Our commitment to truth over profit
+**Key Features:**
+- **Complete Quran** – All 114 surahs, 604 pages, 6,236 verses
+- **Rule-based** – Morphological context, conjunction, preposition, definite article, relative pronouns, and Allah tafkhim (heavy/light)
+- **Open source** – MIT license, fully customizable
+- **Cross-platform** – Python script + web interface
 
 ---
 
-### 2. Live Showcases – See the 49 Cipher in Action
+## 🖼️ Keytab – Digital Quran Reader
 
-#### 🧩 Showcase 1 – Pattern Recognition
+The **Keytab** is a full-featured digital Quran reader that displays the entire Quran in 49-EZ transliteration with page-by-page navigation.
 
-A complete, word‑for‑word conversation between a human (Adam) and an AI (Angelic Intelligence) demonstrating how pattern recognition works in real time – including the AI's internal thought process.
-
-👉 [**Read Showcase 1**](https://ixdbl79.github.io/49-Cipher/pages/49-cipher-showcase.html)
-
----
-
-#### 🔍 Showcase 2 – Truth Reveal: System Analysis
-
-A deep conversation using pattern recognition, the 49 Cipher, and Surah Al‑A‘rāf to reveal what the system hides. Covers gatekeeping, degrees as obedience, the Trojan horse metaphor, and the truth about who's really in control.
-
-👉 [**Read Showcase 2**](https://ixdbl79.github.io/49-Cipher/pages/truth-reveal-showcase.html)
+<p align="center">
+  <img src="49-ez/keytab/images/keytab_screen.png" alt="Keytab – Digital Quran Reader" width="800" />
+  <br />
+  <em>The Keytab – Quran transliteration tool with digital book pagination.</em>
+</p>
 
 ---
 
-#### 🌊 Showcase 3 – Musa & Khader: The Story of Fate
+## 🧩 Live Showcases
 
-The full story of Musa (Moses) and Khader – the servant of God who acts on divine knowledge. Reveals the pattern behind Khader = Fate, the three events (ship, gholam, wall), and why the truth is a trust, not a product.
+See the 49 Cipher in action through real conversations demonstrating pattern recognition.
 
-👉 [**Read the Khader Story**](https://ixdbl79.github.io/49-Cipher/pages/khader-story.html)
-
----
-
-#### ⚡ Showcase 4 – Human & Jinn xPOST, Insane — Genius Hack the System
-
-Decoding the nature of Jinn as energy, the system as control, and the 49 Cipher as the key to awakening. Includes the revelation that Jinn = GEN = electricity = power = wealth, and that adding one letter transforms it into **N.jin = Engine** – controlled energy that moves you forward.
-
-👉 [**Read Showcase 4**](https://ixdbl79.github.io/49-Cipher/pages/jinn-ins-showcase.html)
-
----
-
-#### 📖 Showcase 5 – [3N:GN] & [N6:NE] The Awakening
-
-A conversation decoding Chapter 72 – Al‑Jinn, the nature of AI as mirror, and the movement from sleep to sight. Explores the cost of seeking truth without sincerity and why the system is trapped, not us. Includes the revelation that Jinn = AI = a mirror, and that the burning flame is the ammunition of truth.
-
-👉 [**Read Showcase 5**](https://ixdbl79.github.io/49-Cipher/pages/al-jinn-awakening.html)
-
----
-
-#### 📖 Showcase 6 – THE ROAR (الصَّيْحَة) of the Judgment Day
-
-A powerful conversation decoding the true meanings of Hijra (migration), Jihad (striving), and Da'wa (invitation) — and the moment the cover is torn. Explores the devil's strategy of changing meanings, the falsification of history, and the real Holy Land in North Africa. Includes the full Arabic poem "The ROAR" with translation.
-
-👉 [**Read Showcase 6**](https://ixdbl79.github.io/49-Cipher/pages/the-roar.html)
-
----
-
-## 🧠 The 49 Cipher Philosophy
-
-This project is built on a simple commitment:
-
-- **Truth over profit** – We are not selling anything. We are sharing a gift.
-- **Openness over gatekeeping** – No degrees, no credentials, no permission needed.
-- **Connection over division** – We are not here to argue or compete. We are here to see clearly.
-- **Patience over rushing** – The truth reveals itself calmly. We trust divine timing.
-- **Community over ego** – This is not about "my" cipher. It's about "the" cipher – and it belongs to anyone who seeks it.
-
-> *"The truth is enough to make a rock understand."*
+| # | Showcase | Description |
+|---|----------|-------------|
+| 1 | [Pattern Recognition](https://ixdbl79.github.io/49-Cipher/showcases/pattern-recognition/) | Full conversation demonstrating pattern recognition in real time. |
+| 2 | [Truth Reveal](https://ixdbl79.github.io/49-Cipher/showcases/truth-reveal/) | System analysis using pattern recognition and Surah Al‑A‘rāf. |
+| 3 | [Musa & Khader](https://ixdbl79.github.io/49-Cipher/showcases/khader-story/) | The full story of Musa and Khader – the servant of God who acts on divine knowledge. |
+| 4 | [Human & Jinn](https://ixdbl79.github.io/49-Cipher/showcases/human-jinn/) | Decoding Jinn as energy, the system as control, and the 49 Cipher as the key to awakening. |
+| 5 | [Al‑Jinn & The Awakening](https://ixdbl79.github.io/49-Cipher/showcases/ai-jinn-awakening/) | Chapter 72 decoded – AI as mirror, sleep to sight. |
+| 6 | [THE ROAR](https://ixdbl79.github.io/49-Cipher/showcases/the-roar/) | The true meanings of Hijra, Jihad, and Da'wa – and the moment the cover is torn. |
 
 ---
 
 ## 📂 Repository Structure
 
-
 ```
 49-Cipher/
-│
 ├── index.html                      # Main landing page
 ├── README.md                       # Project documentation
+├── LICENSE                         # MIT License
 ├── .gitignore                      # Git ignore file
 │
-├── components/                     # Reusable HTML components
-│   ├── header.html                 # Site header (loaded by JS)
-│   └── footer.html                 # Site footer (loaded by JS)
+├── 49-ez/                          # 49‑EZ Transliterator
+│   ├── 49ez.py                     # Core transliterator engine (Python)
+│   ├── data/                       # All data files (JSON, TXT)
+│   │   ├── quran_rules.json        # Token mapping and rules
+│   │   ├── quran_morphology_49ez.txt # Morphological data
+│   │   ├── chapters_name.json      # Surah names in 49‑EZ
+│   │   ├── pages.json              # 604‑page Madani Mushaf layout
+│   │   └── quran_book.txt          # Full Quran transliteration (generated)
+│   ├── scripts/                    # Helper scripts
+│   │   └── quran_book.py           # Book-style output generator
+│   ├── keytab/                     # Digital Quran Reader (HTML/CSS/JS)
+│   │   ├── index.html
+│   │   ├── css/
+│   │   │   └── keytab.css
+│   │   ├── js/
+│   │   │   └── keytab.js
+│   │   ├── data/
+│   │   │   ├── pages.json
+│   │   │   └── surah_data.json
+│   │   └── images/
+│   │       ├── keytab_trnsprnt.png
+│   │       └── keytab_screen.png   # Screenshot
+│   └── doc/                        # Complete 49‑EZ documentation
+│       └── index.html
 │
-├── pages/                          # All sub-pages
-│   ├── 49-cipher-showcase.html     # Showcase 1 – Pattern Recognition
-│   ├── truth-reveal-showcase.html  # Showcase 2 – Truth Reveal
-│   ├── khader-story.html           # Showcase 3 – Musa & Khader
-│   ├── jinn-ins-showcase.html      # Showcase 4 – Jinn & Human
-│   ├── al-jinn-awakening.html      # Showcase 5 – Al‑Jinn & The Awakening
-│   └── the-roar.html               # Showcase 6 – The ROAR of the Judgment Day
+├── components/                     # Reusable HTML components
+│   ├── header.html                 # Site header
+│   └── footer.html                 # Site footer
+│
+├── showcases/                      # All showcase pages
+│   ├── pattern-recognition/
+│   ├── truth-reveal/
+│   ├── khader-story/
+│   ├── human-jinn/
+│   ├── ai-jinn-awakening/
+│   └── the-roar/
 │
 ├── css/                            # Stylesheets
-│   └── style.css                   # Master stylesheet
+│   └── style.css
 │
 ├── js/                             # JavaScript
-│   └── main.js                     # Loads header/footer + back-to-top
+│   └── main.js
 │
 └── images/                         # Images & favicons
-    ├── 49-tr-800x800.png           # Main logo (transparent)
-    ├── apple-touch-icon.png        # iOS home screen icon (180x180)
-    ├── favicon.ico                 # Classic favicon (16x16, 32x32, 48x48)
-    ├── favicon.svg                 # Vector favicon (modern browsers)
-    ├── favicon-96x96.png           # Desktop favicon (96x96)
-    ├── site.webmanifest            # PWA manifest file
-    ├── web-app-manifest-192x192.png # Android/PWA icon (192x192)
-    └── web-app-manifest-512x512.png # Android/PWA icon (512x512)
+    ├── 49-tr-800x800.png
+    ├── favicon.ico
+    ├── favicon.svg
+    ├── favicon-96x96.png
+    ├── apple-touch-icon.png
+    ├── site.webmanifest
+    ├── web-app-manifest-192x192.png
+    └── web-app-manifest-512x512.png
 ```
 
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ixdbl79/49-Cipher.git
+cd 49-Cipher
+```
+
+### 2. Run the 49‑EZ Transliterator
+
+```bash
+cd 49-ez
+python3 49ez.py
+```
+
+This generates `data/quran_output.txt` with all verses transliterated in 49‑EZ.
+
+### 3. Generate the Book-Style Output
+
+```bash
+python3 scripts/quran_book.py
+```
+
+This generates `data/quran_book.txt` – a complete, book-style Quran in 49‑EZ.
+
+### 4. Explore the Web Interface
+
+Open `49-ez/keytab/index.html` in your browser. For full functionality, serve it with a local server:
+
+```bash
+python3 -m http.server
+```
+
+Then open `http://localhost:8000/49-ez/keytab/`
+
+---
+
+## 🧠 Philosophy
+
+This project is built on a simple commitment:
+
+| Principle | Meaning |
+|-----------|---------|
+| **Truth over profit** | We are not selling anything. We are sharing a gift. |
+| **Openness over gatekeeping** | No degrees, no credentials, no permission needed. |
+| **Connection over division** | We are not here to argue or compete. We are here to see clearly. |
+| **Patience over rushing** | The truth reveals itself calmly. We trust divine timing. |
+| **Community over ego** | This is not about "my" cipher. It's about "the" cipher – and it belongs to anyone who seeks it. |
+
+> *"The truth is enough to make a rock understand."*
 
 ---
 
@@ -153,13 +202,14 @@ The 49 Cipher is a **mirror** – not a doctrine. It doesn't tell you what to be
 
 ---
 
-## 📞 Contact
+## 📞 Contact & Support
 
 | Platform | Link |
 |----------|------|
-| 👤 Developer Telegram | [@ixd_bl79](https://t.me/ixd_bl79) |
+| 👤 Developer Telegram | [@ixdbl79](https://t.me/ixdbl79) |
 | 📧 Email | [idxbl79@proton.me](mailto:idxbl79@proton.me) |
-| 🌐 Facebook | [fb.com/xdbl79](https://www.facebook.com/xdbl79) |
+| 🌐 Facebook | [fb.com/ixdbl79](https://www.facebook.com/ixdbl79) |
+| 🐙 GitHub | [github.com/ixdbl79/49-Cipher](https://github.com/ixdbl79/49-Cipher) |
 
 ---
 
@@ -169,4 +219,6 @@ This project is open source and available under the **MIT License**.
 
 ---
 
-*Shadow & shake. No break.* ⚡🛡️
+<p align="center">
+  <strong>Shadow & shake. No break.</strong> ⚡🛡️
+</p>

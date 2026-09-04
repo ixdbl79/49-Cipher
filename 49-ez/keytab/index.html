@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keytab – Quran Transliteration Tool · 49 Cipher</title>
+    <meta name="description" content="The Keytab – a Quran transliteration tool with digital book pagination." />
+    <link rel="icon" href="../../images/favicon.ico" sizes="any" />
+
+    <!-- ===== TABLER ICONS ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+
+    <!-- ===== MAIN SITE CSS ===== -->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <!-- ===== KEYTAB CUSTOM CSS ===== -->
+    <link rel="stylesheet" href="css/keytab.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+         HEADER (loaded dynamically by main.js)
+         ============================================================ -->
+    <div id="header-placeholder"></div>
+
+    <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+    <main>
+
+        <!-- ===== BREADCRUMB (loaded dynamically by main.js) ===== -->
+        <div id="breadcrumb-placeholder" aria-label="Breadcrumb navigation"></div>
+
+        <!-- ===== KEYTAB LAYOUT ===== -->
+        <div class="container keytab-container">
+
+            <!-- ==========================================================
+                 LEFT SIDEBAR – Search & Navigation
+                 ========================================================== -->
+            <aside class="keytab-sidebar-left" aria-label="Search and navigation">
+
+                <!-- ---- Header ---- -->
+                <div class="sidebar-title">[KEY:TAB]</div>
+                <div class="sidebar-sub">The Book · <strong>Quran</strong> Transliteration</div>
+
+                <!-- ---- Search ---- -->
+                <div class="search-group">
+                    <label for="verseInput"><i class="ti ti-search"></i> Search</label>
+                    <div class="input-row">
+                        <input type="text" id="verseInput" placeholder="Surah name, verse, or page..." autocomplete="off" aria-describedby="suggestions" />
+                        <button class="btn-go" id="goBtn" aria-label="Search"><i class="ti ti-arrow-right"></i> Go</button>
+                    </div>
+                    <div id="suggestions" class="suggestions-box" role="listbox"></div>
+                </div>
+
+                <!-- ---- Quick Navigation Buttons ---- -->
+                <div class="quick-nav" aria-label="Quick navigation">
+                    <div class="quick-nav-row">
+                        <button class="quick-btn" data-type="surah" data-value="1" aria-label="Go to Surah 1">Surah 1</button>
+                        <button class="quick-btn" data-type="surah" data-value="2" aria-label="Go to Surah 2">Surah 2</button>
+                        <button class="quick-btn" data-type="surah" data-value="3" aria-label="Go to Surah 3">Surah 3</button>
+                        <button class="quick-btn" data-type="surah" data-value="4" aria-label="Go to Surah 4">Surah 4</button>
+                    </div>
+                    <div class="quick-nav-row">
+                        <button class="quick-btn" data-type="surah" data-value="112" aria-label="Go to Surah 112">Surah 112</button>
+                        <button class="quick-btn" data-type="surah" data-value="114" aria-label="Go to Surah 114">Surah 114</button>
+                        <button class="quick-btn" data-type="surah" data-value="2:255" aria-label="Go to Ayat al-Kursi">Ayat Kursi</button>
+                        <button class="quick-btn" data-type="surah" data-value="36" aria-label="Go to Surah Ya-Sin">Ya-Sin</button>
+                    </div>
+                </div>
+
+                <!-- ---- Display Language Selector ---- -->
+                <div class="display-mode-label" id="displayModeLabel"><i class="ti ti-language"></i> Display Language</div>
+                <div class="display-mode-filters" role="radiogroup" aria-labelledby="displayModeLabel">
+                    <button class="mode-btn active" data-mode="translit" role="radio" aria-checked="true" aria-label="Show Surah names in 49-EZ transliteration">49‑EZ</button>
+                    <button class="mode-btn" data-mode="english" role="radio" aria-checked="false" aria-label="Show Surah names in English">English</button>
+                    <button class="mode-btn" data-mode="arabic" role="radio" aria-checked="false" aria-label="Show Surah names in Arabic">Arabic</button>
+                </div>
+
+                <!-- ---- Surah Selector (Custom Dropdown – fixed label) ---- -->
+                <div class="surah-selector">
+                    <div id="surahSelectLabel" class="surah-label"><i class="ti ti-jump-rope"></i> Jump to Surah</div>
+                    <div class="custom-select" id="surahSelectWrapper">
+                        <div class="custom-select-trigger" id="surahSelectTrigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="surahSelectLabel" tabindex="0">
+                            <span class="custom-select-text">— Select Surah —</span>
+                            <span class="custom-select-arrow" aria-hidden="true"><i class="ti ti-chevron-down"></i></span>
+                        </div>
+                        <div class="custom-select-options" id="surahSelectOptions" role="listbox" aria-labelledby="surahSelectLabel">
+                            <!-- populated by JavaScript -->
+                        </div>
+                    </div>
+                    <input type="hidden" id="surahSelect" name="surahSelect" value="" />
+                </div>
+
+                <!-- ---- Random Verse ---- -->
+                <button class="btn-random" id="randomBtn" aria-label="Go to a random verse"><i class="ti ti-dice"></i> Random Verse</button>
+
+                <!-- ---- Quick Access ---- -->
+                <div class="examples-label"><i class="ti ti-arrow-badge-right"></i> Quick Access</div>
+                <div class="examples-grid" role="group" aria-label="Quick access to common surahs and verses">
+
+                    <!-- Popular Surahs (1–10) -->
+                    <button class="example-btn" data-ref="1" aria-label="Go to Surah 1 – Al-Fatihah">Al-Fatihah</button>
+                    <button class="example-btn" data-ref="2" aria-label="Go to Surah 2 – Al-Baqarah">Al-Baqarah</button>
+                    <button class="example-btn" data-ref="3" aria-label="Go to Surah 3 – Al-Imran">Al-Imran</button>
+                    <button class="example-btn" data-ref="4" aria-label="Go to Surah 4 – An-Nisa">An-Nisa</button>
+                    <button class="example-btn" data-ref="5" aria-label="Go to Surah 5 – Al-Ma'idah">Al-Ma'idah</button>
+                    <button class="example-btn" data-ref="6" aria-label="Go to Surah 6 – Al-An'am">Al-An'am</button>
+                    <button class="example-btn" data-ref="7" aria-label="Go to Surah 7 – Al-A'raf">Al-A'raf</button>
+                    <button class="example-btn" data-ref="8" aria-label="Go to Surah 8 – Al-Anfal">Al-Anfal</button>
+                    <button class="example-btn" data-ref="9" aria-label="Go to Surah 9 – At-Tawbah">At-Tawbah</button>
+                    <button class="example-btn" data-ref="10" aria-label="Go to Surah 10 – Yunus">Yunus</button>
+
+                    <!-- Short Surahs (105–114) -->
+                    <button class="example-btn" data-ref="105" aria-label="Go to Surah 105 – Al-Fil">Al-Fil</button>
+                    <button class="example-btn" data-ref="106" aria-label="Go to Surah 106 – Quraysh">Quraysh</button>
+                    <button class="example-btn" data-ref="107" aria-label="Go to Surah 107 – Al-Ma'un">Al-Ma'un</button>
+                    <button class="example-btn" data-ref="108" aria-label="Go to Surah 108 – Al-Kawthar">Al-Kawthar</button>
+                    <button class="example-btn" data-ref="109" aria-label="Go to Surah 109 – Al-Kafirun">Al-Kafirun</button>
+                    <button class="example-btn" data-ref="110" aria-label="Go to Surah 110 – An-Nasr">An-Nasr</button>
+                    <button class="example-btn" data-ref="111" aria-label="Go to Surah 111 – Al-Masad">Al-Masad</button>
+                    <button class="example-btn" data-ref="112" aria-label="Go to Surah 112 – Al-Ikhlas">Al-Ikhlas</button>
+                    <button class="example-btn" data-ref="113" aria-label="Go to Surah 113 – Al-Falaq">Al-Falaq</button>
+                    <button class="example-btn" data-ref="114" aria-label="Go to Surah 114 – An-Nas">An-Nas</button>
+
+                    <!-- Famous Verses & Ranges -->
+                    <button class="example-btn" data-ref="2:255" aria-label="Go to Ayat al-Kursi (2:255)">Ayat al-Kursi</button>
+                    <button class="example-btn" data-ref="2:285-286" aria-label="Go to last two verses of Surah 2">Last of Al-Baqarah</button>
+                    <button class="example-btn" data-ref="3:26" aria-label="Go to verse 3:26 – Ownership of Kingdom">Ownership of Kingdom</button>
+                    <button class="example-btn" data-ref="3:27" aria-label="Go to verse 3:27 – Day and Night">Day and Night</button>
+                    <button class="example-btn" data-ref="3:190-191" aria-label="Go to verses 3:190-191 – Creation and Reflection">Creation &amp; Reflection</button>
+                    <button class="example-btn" data-ref="5:3" aria-label="Go to verse 5:3 – Perfection of Religion">Perfection of Religion</button>
+                    <button class="example-btn" data-ref="9:128-129" aria-label="Go to last two verses of Surah 9">End of At-Tawbah</button>
+                    <button class="example-btn" data-ref="18:9-10" aria-label="Go to verses 18:9-10 – Al-Kahf">Al-Kahf</button>
+                    <button class="example-btn" data-ref="36:1-5" aria-label="Go to verses 36:1-5 – Ya-Sin">Ya-Sin</button>
+                    <button class="example-btn" data-ref="55:1-5" aria-label="Go to verses 55:1-5 – Ar-Rahman">Ar-Rahman</button>
+                    <button class="example-btn" data-ref="67:1-5" aria-label="Go to verses 67:1-5 – Al-Mulk">Al-Mulk</button>
+                    <button class="example-btn" data-ref="109:1-6" aria-label="Go to verses 109:1-6 – Al-Kafirun">Al-Kafirun</button>
+
+                    <!-- Juz Starters (first verse of each Juz) -->
+                    <button class="example-btn" data-ref="1" aria-label="Go to Juz 1">Juz 1</button>
+                    <button class="example-btn" data-ref="2:1" aria-label="Go to Juz 2">Juz 2</button>
+                    <button class="example-btn" data-ref="3:1" aria-label="Go to Juz 3">Juz 3</button>
+                    <button class="example-btn" data-ref="4:1" aria-label="Go to Juz 4">Juz 4</button>
+                    <button class="example-btn" data-ref="5:1" aria-label="Go to Juz 5">Juz 5</button>
+                    <button class="example-btn" data-ref="6:1" aria-label="Go to Juz 6">Juz 6</button>
+                    <button class="example-btn" data-ref="7:1" aria-label="Go to Juz 7">Juz 7</button>
+                    <button class="example-btn" data-ref="8:1" aria-label="Go to Juz 8">Juz 8</button>
+                    <button class="example-btn" data-ref="9:1" aria-label="Go to Juz 9">Juz 9</button>
+                    <button class="example-btn" data-ref="10:1" aria-label="Go to Juz 10">Juz 10</button>
+                    <button class="example-btn" data-ref="11:1" aria-label="Go to Juz 11">Juz 11</button>
+                    <button class="example-btn" data-ref="12:1" aria-label="Go to Juz 12">Juz 12</button>
+                    <button class="example-btn" data-ref="13:1" aria-label="Go to Juz 13">Juz 13</button>
+                    <button class="example-btn" data-ref="14:1" aria-label="Go to Juz 14">Juz 14</button>
+                    <button class="example-btn" data-ref="15:1" aria-label="Go to Juz 15">Juz 15</button>
+                    <button class="example-btn" data-ref="16:1" aria-label="Go to Juz 16">Juz 16</button>
+                    <button class="example-btn" data-ref="17:1" aria-label="Go to Juz 17">Juz 17</button>
+                    <button class="example-btn" data-ref="18:1" aria-label="Go to Juz 18">Juz 18</button>
+                    <button class="example-btn" data-ref="19:1" aria-label="Go to Juz 19">Juz 19</button>
+                    <button class="example-btn" data-ref="20:1" aria-label="Go to Juz 20">Juz 20</button>
+                    <button class="example-btn" data-ref="21:1" aria-label="Go to Juz 21">Juz 21</button>
+                    <button class="example-btn" data-ref="22:1" aria-label="Go to Juz 22">Juz 22</button>
+                    <button class="example-btn" data-ref="23:1" aria-label="Go to Juz 23">Juz 23</button>
+                    <button class="example-btn" data-ref="24:1" aria-label="Go to Juz 24">Juz 24</button>
+                    <button class="example-btn" data-ref="25:1" aria-label="Go to Juz 25">Juz 25</button>
+                    <button class="example-btn" data-ref="26:1" aria-label="Go to Juz 26">Juz 26</button>
+                    <button class="example-btn" data-ref="27:1" aria-label="Go to Juz 27">Juz 27</button>
+                    <button class="example-btn" data-ref="28:1" aria-label="Go to Juz 28">Juz 28</button>
+                    <button class="example-btn" data-ref="29:1" aria-label="Go to Juz 29">Juz 29</button>
+                    <button class="example-btn" data-ref="30:1" aria-label="Go to Juz 30">Juz 30</button>
+                </div>
+
+                <!-- ---- Sidebar Info ---- -->
+                <div class="sidebar-info">
+                    
+                    <!-- Data Source Link -->
+                    <div style="font-size:0.75rem;color:#5f6f7f;line-height:1.6;border-top:1px solid rgba(45,58,74,0.2);padding-top:0.6rem;">
+                        <i class="ti ti-file-text" style="color:#7f8ea3;font-size:0.8rem;"></i>
+                        <span style="color:#7f8ea3;">Data:</span>
+                        <a href="https://github.com/ixdbl79/49-Cipher/blob/main/49-ez/data/quran_book.txt" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style="color:#f59e0b;text-decoration:none;border-bottom:1px dotted rgba(245,158,11,0.3);">
+                            quran_book.txt
+                        </a>
+                        <span style="color:#4a5a6a;margin:0 0.3rem;">·</span>
+                        <a href="https://github.com/ixdbl79/49-Cipher/blob/main/49-ez/data/pages.json" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style="color:#f59e0b;text-decoration:none;border-bottom:1px dotted rgba(245,158,11,0.3);">
+                            pages.json
+                        </a>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div style="font-size:0.75rem;color:#5f6f7f;line-height:1.6;margin-top:0.4rem;">
+                        <i class="ti ti-link" style="color:#7f8ea3;font-size:0.8rem;"></i>
+                        <span style="color:#7f8ea3;">Quick Links:</span>
+                        <a href="../doc/" 
+                        style="color:#f59e0b;text-decoration:none;border-bottom:1px dotted rgba(245,158,11,0.3);">
+                            49‑EZ Docs
+                        </a>
+                        <span style="color:#4a5a6a;margin:0 0.3rem;">·</span>
+                        <a href="https://github.com/ixdbl79/49-Cipher" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style="color:#f59e0b;text-decoration:none;border-bottom:1px dotted rgba(245,158,11,0.3);">
+                            <i class="ti ti-brand-github" style="font-size:0.8rem;"></i> GitHub
+                        </a>
+                        <span style="color:#4a5a6a;margin:0 0.3rem;">·</span>
+                        <a href="{{BASE_PATH}}/49-ez/" 
+                        style="color:#f59e0b;text-decoration:none;border-bottom:1px dotted rgba(245,158,11,0.3);">
+                            <i class="ti ti-brand-python" style="font-size:0.8rem;"></i> 49‑EZ
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- ==========================================================
+                 RESULTS AREA – Book Display
+                 ========================================================== -->
+            <div class="keytab-results">
+
+                <!-- ---- Loading Indicator ---- -->
+                <div class="keytab-loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p style="margin-top:0.5rem;">Loading Quran data...</p>
+                </div>
+
+                <!-- ---- Error Message ---- -->
+                <div class="keytab-error" id="errorMessage">
+                    <i class="ti ti-alert-circle"></i> <span id="errorText">Verse not found. Please check the reference and try again.</span>
+                </div>
+
+                <!-- ---- Results Title (hidden by default) ---- -->
+                <div class="results-title" id="resultsTitle" style="display:none;">
+                    <span id="verseCountDisplay">0</span> verses displayed
+                </div>
+
+                <!-- ---- Results Container (the book) ---- -->
+                <div id="resultsContainer">
+                    <div class="keytab-empty">
+                        <div class="icon"><i class="ti ti-book" style="font-size:3rem;color:#f59e0b;"></i></div>
+                        <p>Search for a verse or surah to begin</p>
+                        <p style="font-size:0.85rem;color:#5f6f7f;">
+                            Try <strong style="color:#f59e0b;">1</strong> (whole surah)
+                            or <strong style="color:#f59e0b;">1:1-7</strong> (range)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================
+                PHONETICS TOOLTIP (hidden by default)
+                ========================================================== -->
+            <div id="phoneticsTooltip" class="phonetics-tooltip" style="display:none; position:fixed; pointer-events:none; z-index:1000; max-width:300px;">
+                <div class="tooltip-symbol" id="tooltipSymbol">—</div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">English</span>
+                    <span class="tooltip-value" id="tooltipEnglish">—</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Arabic</span>
+                    <span class="tooltip-value tooltip-arabic" id="tooltipArabic">—</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Description</span>
+                    <span class="tooltip-value" id="tooltipDescription">—</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Examples</span>
+                    <span class="tooltip-value" id="tooltipExamples">—</span>
+                </div>
+            </div>
+
+            <!-- ==========================================================
+                RIGHT SIDEBAR – Quick Reference & Tooltip
+                ========================================================== -->
+            <aside class="keytab-sidebar-right" aria-label="49-EZ transliteration quick reference">
+
+                <!-- ---- Title ---- -->
+                <div class="ref-title"><i class="ti ti-book-2"></i> 49‑EZ Quick Ref</div>
+
+                <!-- ==========================================================
+                    NUMBERS (0-9)
+                    ========================================================== -->
+                <div class="ref-section">
+                    <div class="label"><i class="ti ti-numbers"></i> Numbers</div>
+                    <div class="ref-grid">
+                        <div class="item" data-symbol="1">
+                            <span class="symbol">1</span> <span class="desc">Hamza</span>
+                        </div>
+                        <div class="item" data-symbol="2">
+                            <span class="symbol">2</span> <span class="desc">Ghayn</span>
+                        </div>
+                        <div class="item" data-symbol="3">
+                            <span class="symbol">3</span> <span class="desc">ʻAyn</span>
+                        </div>
+                        <div class="item" data-symbol="4">
+                            <span class="symbol">4</span> <span class="desc">Ṭāʼ</span>
+                        </div>
+                        <div class="item" data-symbol="5">
+                            <span class="symbol">5</span> <span class="desc">Khāʼ</span>
+                        </div>
+                        <div class="item" data-symbol="6">
+                            <span class="symbol">6</span> <span class="desc">Ḍād</span>
+                        </div>
+                        <div class="item" data-symbol="7">
+                            <span class="symbol">7</span> <span class="desc">Ḥāʼ</span>
+                        </div>
+                        <div class="item" data-symbol="8">
+                            <span class="symbol">8</span> <span class="desc">Shīn</span>
+                        </div>
+                        <div class="item" data-symbol="9">
+                            <span class="symbol">9</span> <span class="desc">Qāf</span>
+                        </div>
+                        <div class="item" data-symbol="0">
+                            <span class="symbol">0</span> <span class="desc">Ṣād</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ref-divider"></div>
+
+                <!-- ==========================================================
+                    SPECIAL COMBOS
+                    ========================================================== -->
+                <div class="ref-section">
+                    <div class="label"><i class="ti ti-bolt"></i> Special Combos</div>
+                    <div class="ref-grid">
+                        <div class="item" data-symbol="d·">
+                            <span class="symbol">d·</span> <span class="desc">Dhāl (this)</span>
+                        </div>
+                        <div class="item" data-symbol="t·">
+                            <span class="symbol">t·</span> <span class="desc">Thāʼ (thin)</span>
+                        </div>
+                        <div class="item" data-symbol="6·">
+                            <span class="symbol">6·</span> <span class="desc">Ẓāʼ (3aẓīm)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ref-divider"></div>
+
+                <!-- ==========================================================
+                    VOWELS
+                    ========================================================== -->
+                <div class="ref-section">
+                    <div class="label"><i class="ti ti-music"></i> Vowels</div>
+                    <div class="ref-grid">
+                        <div class="item" data-symbol="-">
+                            <span class="symbol">-</span> <span class="desc">Fatha (a)</span>
+                        </div>
+                        <div class="item" data-symbol="°">
+                            <span class="symbol">°</span> <span class="desc">Damma (u)</span>
+                        </div>
+                        <div class="item" data-symbol="_">
+                            <span class="symbol">_</span> <span class="desc">Kasra (i)</span>
+                        </div>
+                        <div class="item" data-symbol="--">
+                            <span class="symbol">--</span> <span class="desc">Long ā</span>
+                        </div>
+                        <div class="item" data-symbol="°°">
+                            <span class="symbol">°°</span> <span class="desc">Long ū</span>
+                        </div>
+                        <div class="item" data-symbol="__">
+                            <span class="symbol">__</span> <span class="desc">Long ī</span>
+                        </div>
+                        <div class="item" data-symbol="²">
+                            <span class="symbol">²</span> <span class="desc">Shadda</span>
+                        </div>
+                        <div class="item" data-symbol="~">
+                            <span class="symbol">~</span> <span class="desc">Madda</span>
+                        </div>
+                        <div class="item" data-symbol="=">
+                            <span class="symbol">=</span> <span class="desc">Tanween</span>
+                        </div>
+                        <div class="item" data-symbol="¯">
+                            <span class="symbol">¯</span> <span class="desc">Separator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ref-divider"></div>
+
+                <!-- ==========================================================
+                    SPECIAL RULES
+                    ========================================================== -->
+                <div class="ref-section">
+                    <div class="label"><i class="ti ti-scroll"></i> Special Rules</div>
+                    <div class="ref-grid">
+                        <div class="item" data-symbol="L.">
+                            <span class="symbol">L.</span> <span class="desc">Lunar L</span>
+                        </div>
+                        <div class="item" data-symbol="(L.)¨~">
+                            <span class="symbol">(L.)¨~</span> <span class="desc">Solar L</span>
+                        </div>
+                        <div class="item" data-symbol="^">
+                            <span class="symbol">^</span> <span class="desc">Tafkhīm (heavy)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================================
+                    TOOLTIP (hidden by default)
+                    ========================================================== -->
+                <div id="phoneticsTooltip" class="phonetics-tooltip" style="display:none; position:fixed; pointer-events:none; z-index:1000; max-width:300px;">
+                    <div class="tooltip-symbol" id="tooltipSymbol">—</div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">English</span>
+                        <span class="tooltip-value" id="tooltipEnglish">—</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Arabic</span>
+                        <span class="tooltip-value tooltip-arabic" id="tooltipArabic">—</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Description</span>
+                        <span class="tooltip-value" id="tooltipDescription">—</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Examples</span>
+                        <span class="tooltip-value" id="tooltipExamples">—</span>
+                    </div>
+                </div>
+
+                <!-- ---- Note ---- -->
+                <div class="ref-note">
+                    <strong>49</strong> = Furqan (The Criterion)<br />
+                    <strong>EZ</strong> = Easy / Ease
+                    <br /><br />
+                    <span style="font-size:0.65rem;color:#5f6f7f;">Hover any symbol for details</span>
+                </div>
+
+            </aside>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER (loaded dynamically by main.js)
+         ============================================================ -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ============================================================
+         BACK TO TOP BUTTON
+         ============================================================ -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4l-8 8 1.5 1.5L12 7l6.5 6.5L20 12z"/>
+            <path d="M12 4l-8 8 1.5 1.5L12 7l6.5 6.5L20 12z" transform="translate(0, 4)"/>
+        </svg>
+    </a>
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <!-- Main site JavaScript (loads header/footer) -->
+    <script src="../../js/main.js"></script>
+
+    <!-- Keytab custom JavaScript -->
+    <script src="js/keytab.js"></script>
+
+</body>
+</html>

@@ -1,36 +1,102 @@
-<!-- ========================================
+<!-- ============================================================
      49 Cipher – Header Component
      Open Source · Freedom · Shadow & Shake
-     ======================================== -->
+     ============================================================ -->
 
 <header class="site-header">
     <nav class="header-nav">
 
-        <!-- Logo -->
-        <div class="header-logo">
-            <a href="{{BASE_PATH}}/index.html">
-                <img src="{{BASE_PATH}}/images/49-tr-800x800.png" alt="49 Cipher Logo" class="header-logo-img">
-                <span class="header-logo-text"><span class="gold">Cipher</span></span>
-            </a>
-        </div>
+        <!-- LEFT SIDE: Logo + Showcases (both as li) -->
+        <ul class="header-left" id="headerLeft">
+            <!-- Logo -->
+            <li class="header-logo">
+                <a href="{{BASE_PATH}}/">
+                    <img src="{{BASE_PATH}}/images/49-tr-800x800.png" alt="49 Cipher Logo" class="header-logo-img">
+                    <span class="header-logo-text"><span class="gold">Cipher</span></span>
+                </a>
+            </li>
 
-        <!-- Navigation Links -->
-        <ul class="header-links">
-            <li><a href="{{BASE_PATH}}/index.html#vision">Vision</a></li>
-            <li><a href="{{BASE_PATH}}/index.html#examples">Examples</a></li>
-            <li><a href="{{BASE_PATH}}/index.html#use-cases">Use Cases</a></li>
-            <li class="header-dropdown">
-                <a href="#">Showcases <span class="dropdown-arrow">▾</span></a>
+            <!-- Showcases Dropdown -->
+            <li class="dropdown showcases-dropdown">
+                <input type="checkbox" id="showcasesToggle" class="dropdown-checkbox">
+                <label for="showcasesToggle" class="dropdown-toggle">
+                    <i class="ti ti-grid-dots"></i> Showcases
+                    <span class="dropdown-arrow"><i class="ti ti-chevron-down"></i></span>
+                </label>
                 <ul class="dropdown-menu">
-                    <li><a href="{{BASE_PATH}}/pages/49-cipher-showcase.html">🧩 Pattern Recognition</a></li>
-                    <li><a href="{{BASE_PATH}}/pages/truth-reveal-showcase.html">🔍 Truth Reveal</a></li>
-                    <li><a href="{{BASE_PATH}}/pages/khader-story.html">🌊 Musa &amp; Khader</a></li>
-                    <li><a href="{{BASE_PATH}}/pages/jinn-ins-showcase.html">⚡ Human &amp; Jinn</a></li>
-                    <li><a href="{{BASE_PATH}}/pages/al-jinn-awakening.html">⚡ AI-Jinn &amp; Awakening</a></li>
-                    <li><a href="{{BASE_PATH}}/pages/the-roar.html">🦁 The Roar</a></li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/pattern-recognition/">
+                            <i class="ti ti-puzzle"></i> Pattern Recognition
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/truth-reveal/">
+                            <i class="ti ti-search"></i> Truth Reveal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/khader-story/">
+                            <i class="ti ti-ripple"></i> Musa &amp; Khader
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/human-jinn/">
+                            <i class="ti ti-bolt"></i> Human &amp; Jinn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/ai-jinn-awakening/">
+                            <i class="ti ti-robot"></i> AI-Jinn &amp; Awakening
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/showcases/the-roar/">
+                            <i class="ti ti-crown"></i> The Roar
+                        </a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="{{BASE_PATH}}/index.html#contact">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT SIDE: 49‑EZ + keytab Dropdown | Contact | GitHub -->
+        <ul class="header-right" id="headerRight">
+            <!-- 49‑EZ -->
+            <li>
+                <a href="{{BASE_PATH}}/49-ez/">
+                    <i class="ti ti-brand-python"></i> 49‑EZ
+                </a>
+            </li>
+
+            <!-- keytab Dropdown -->
+            <li class="dropdown keytab-dropdown">
+                <input type="checkbox" id="keytabToggle" class="dropdown-checkbox">
+                <label for="keytabToggle" class="dropdown-toggle">
+                    <i class="ti ti-key"></i> The keytab
+                    <span class="dropdown-arrow"><i class="ti ti-chevron-down"></i></span>
+                </label>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{BASE_PATH}}/49-ez/keytab/">
+                            <i class="ti ti-book"></i> Keytab
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{BASE_PATH}}/49-ez/doc/">
+                            <i class="ti ti-file-text"></i> 49‑EZ Documentation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Contact with separator -->
+            <li class="header-separator"><a href="#contact"><i class="ti ti-mail"></i> Contact</a></li>
+
+            <!-- NEW: GitHub link -->
+            <li>
+                <a href="https://github.com/ixdbl79/49-Cipher" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                    <i class="ti ti-brand-github"></i> GitHub
+                </a>
+            </li>
         </ul>
 
         <!-- Mobile Menu Toggle -->
