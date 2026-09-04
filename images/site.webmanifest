@@ -1,39 +1,63 @@
 {
+  "name": "49 Cipher – The Criterion (Furqan)",
+  "short_name": "49 Cipher",
+  "description": "A living language of truth, pattern recognition, and spiritual awakening. Open Source · Freedom · Shadow & Shake.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0a0f1a",
+  "background_color": "#0a0f1a",
+  "categories": ["education", "spirituality", "reference", "open-source"],
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
-      "src": "favicon-96x96.png",
+      "src": "images/favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "apple-touch-icon.png",
+      "src": "images/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "favicon.svg",
+      "src": "images/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "web-app-manifest-192x192.png",
+      "src": "images/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
     },
     {
-      "src": "web-app-manifest-512x512.png",
+      "src": "images/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
+    },
+    {
+      "src": "images/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "screenshot-home.png",
+      "src": "images/screenshot-home.png",
       "sizes": "1280x720",
       "type": "image/png",
       "label": "49 Cipher Home Page"
@@ -47,7 +71,7 @@
       "url": "/49-ez/",
       "icons": [
         {
-          "src": "favicon-96x96.png",
+          "src": "images/favicon-96x96.png",
           "sizes": "96x96"
         }
       ]
@@ -59,7 +83,7 @@
       "url": "/49-ez/keytab/",
       "icons": [
         {
-          "src": "favicon-96x96.png",
+          "src": "images/favicon-96x96.png",
           "sizes": "96x96"
         }
       ]
@@ -71,7 +95,7 @@
       "url": "/49-ez/doc/",
       "icons": [
         {
-          "src": "favicon-96x96.png",
+          "src": "images/favicon-96x96.png",
           "sizes": "96x96"
         }
       ]
